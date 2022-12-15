@@ -1,1 +1,12 @@
 # feedbackapp
+sql: 
+Adtabázis létrehozása: CREATE DATABASE feedbackapp;
+Fő tábla létrehozása: 
+CREATE TABLE answers(
+    ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    FROM_WHERE BIT NOT NULL,
+    SUBCRIBE BIT NOT NULL,
+    EMAIL TINYTEXT NOT NULL,
+    SATISFACTION BIT NOT NULL
+);
+Megjegyzés: A köcsög boostrap csak akkor működik ha behúzom linkről -.-
