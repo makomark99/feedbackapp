@@ -9,4 +9,4 @@ CREATE TABLE answers(
     EMAIL TINYTEXT NOT NULL,
     SATISFACTION BIT NOT NULL
 );
-Megjegyzés: A köcsög boostrap csak akkor működik ha behúzom linkről -.-
+Az adatbázisba már nagyon szépen feltölti
