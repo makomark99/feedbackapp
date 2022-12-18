@@ -2,7 +2,7 @@
 
 require 'includes/databasehandler.inc.php';
 require 'includes/header.php';
-
+require_once 'includes/navbar.php';
 ?>
 <body>
     <div class="container">
