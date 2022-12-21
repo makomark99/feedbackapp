@@ -1,0 +1,9 @@
+#range{ 
+    width: 75%;
+    height: 10px;
+    background: #4caf50;
+}
+.button{
+    border:2px solid red;
+    border-radius: 32px;
+}

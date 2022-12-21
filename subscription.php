@@ -7,23 +7,35 @@ require_once 'includes/navbar.php';
 ?>
 <body>
     <div class="container">
-        <div class="row">
-            <form action="includes/addtodatabase.inc.php" method="post">
-                <input type="radio" id="first" name="subscription" value="1">    
-                <label for="first">Nem, de szeretnék.</label>
-                <br>
-                <input type="radio" id="second" name="subscription" value="2">
-                <label for="second">Nem, és nem is szeretnék.</label>
-                <br>
-                <input type="radio" id="third" name="subscription" value="3">
-                <label for="third">Igen.</label>
-                <br>
-                <button type="submit" name="secondsend">
-                    Következő
-                </button>
-            </form>
-            
-      
+        <div class="row">  
+        <div class="card mt-5 mx-auto" style="width: 50rem;">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-5 mt-3"> <strong>Fel van iratkozva hírlevelünkre?</strong> </h1>
+                <form action="includes/addtodatabase.inc.php" method="post" class="text-center fs-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="subscription" id="first" value="1">
+                        <label class="form-check-label" for="first">
+                            Nem, de szeretnék.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="subscription" id="second" value="2" required>
+                        <label class="form-check-label" for="second">
+                            Nem, és nem is szeretnék.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="subscription" id="third" value="3">
+                        <label class="form-check-label" for="third">
+                            Igen.
+                        </label>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="mt-3 btn btn-danger btn-lg" name="secondsend"><strong>Következő<img src="img/arrow-right.svg" alt=""></strong></button>
+                    </div>
+                </form>
+            </div>
+        </div>
         </div>
     </div>
 </body>

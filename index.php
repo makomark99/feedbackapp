@@ -8,25 +8,41 @@ require_once 'includes/navbar.php';
 <body>
     <div class="container">
         <div class="row">  
-        <div class="card mt-5 mx-auto" style="width: 50rem; height: 25rem;">
+        <div class="card mt-5 mx-auto" style="width: 50rem;">
             <div class="card-body">
                 <h1 class="card-title text-center mb-5 mt-3"> <strong>Honnan hallott rólunk?</strong> </h1>
                 <form action="includes/addtodatabase.inc.php" method="post" class="text-center fs-3">
-                    <input type="radio" id="first" name="fromwhere" value="1">    
-                    <label for="first">Régi ügyfél vagyok (több mint 1 éve ismerem a céget).</label>
-                    <br>
-                    <input type="radio" id="second" name="fromwhere" value="2">
-                    <label for="second">Új ügyfél vagyok, és ajánlás útján hallottam a cégről.</label>
-                    <br>
-                    <input type="radio" id="third" name="fromwhere" value="3">
-                    <label for="third">Új ügyfél vagyok, interneten találkoztam a céggel.</label>
-                    <br>
-                <button type="submit" name="firstsend" class="mt-5 btn btn-danger btn-lg">
-                    Következő
-                </button>
-            </form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fromwhere" id="first" value="1">
+                        <label class="form-check-label" for="first">
+                            Régi ügyfél vagyok (több mint 1 éve ismerem a céget).
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fromwhere" id="second" value="2" required>
+                        <label class="form-check-label" for="second">
+                            Új ügyfél vagyok, és ajánlás útján hallottam a cégről.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fromwhere" id="third" value="3">
+                        <label class="form-check-label" for="third">
+                            Új ügyfél vagyok, interneten találkoztam a céggel.
+                        </label>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="mt-3 btn btn-outline-danger btn-lg button" name="firstsend"><strong>Következő <img src="img/arrow-right.svg" alt=""></strong></button>
+                    </div>
+                </form>
             </div>
         </div>
         </div>
     </div>
 </body>
+<style>
+    .button{
+        border:2px solid red;
+        border-radius: 32px;
+    }
+    
+</style>

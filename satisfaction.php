@@ -6,26 +6,20 @@ require_once 'includes/navbar.php';
 ?>
 <body>
     <div class="container">
-        <div class="row">
-            <form action="includes/addtodatabase.inc.php" method="post">
-                <input type="radio" name="satisfaction" value="1">    
-                <label for="first">Nem elégedett</label>
-                <br>
-                <input type="radio" name="satisfaction" value="2">
-                <label for="second">Átlagos</label>
-                <br>
-                <input type="radio" name="satisfaction" value="3">
-                <label for="third">Elégedett.</label>
-                <br>
-                <input type="radio" name="satisfaction" value="4">
-                <label for="third">Nagyon elégedett.</label>
-                <br>
-                <button type="submit" name="fourthsend">
-                    Következő
-                </button>
-            </form>
-            
-      
+        <div class="row">  
+        <div class="card mt-5 mx-auto" style="width: 50rem;">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-5 mt-3"> <strong>Értékelje az adott vásárlását. Mennyire elégedett összességében?</strong></h1>
+                <form action="includes/addtodatabase.inc.php" method="post" class="text-center fs-3">
+                    <input type="range" id="range" name="satisfaction" min="1" max="4" step=1 class="slider">
+                    <p id="text">Elégedett</p>
+                    <div class="col-12">
+                        <button type="submit" class="mt-3 btn btn-outline-danger btn-lg button" name="fourthsend" ><strong>Következő <img src="img/arrow-right.svg" alt=""></strong></button>
+                    </div>
+                </form>
+            </div>
+        </div>
         </div>
     </div>
-</body>
+</body> 
+<script src="includes/script.js"></script>
