@@ -7,3 +7,8 @@
     border:2px solid red;
     border-radius: 32px;
 }
+@media screen and (max-width: 800px) {
+    .time{
+        display: none;
+    }
+}
