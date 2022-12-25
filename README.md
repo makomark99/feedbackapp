@@ -16,4 +16,5 @@ CREATE TABLE users(
 );
  Az users táblába kézzel kell beírni az adatot:
  admin
- $2y$10$RRHmtsJlBPU2Mqz.LkJYmOp4iHAr3q45qrtcYNv/U8yoXun0WqOFm
+ $2y$10$RRHmtsJlBPU2Mqz.LkJYmOp4iHAr3q45qrtcYNv/U8yoXun0WqOFm 
+ dadada
