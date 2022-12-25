@@ -2,7 +2,7 @@
  require_once 'includes/header.php';
  require_once 'includes/navbar.php';
  require_once 'includes/databasehandler.inc.php';
- 
+ require_once 'includes/datafromserver.inc.php';
  if(!isset($_SESSION['id'])){
     header('Location: ./index.php');
     exit();

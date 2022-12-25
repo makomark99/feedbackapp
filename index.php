@@ -4,6 +4,10 @@ require_once 'includes/databasehandler.inc.php';
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
 
+if(isset($_SESSION['id'])){
+    header('Location: ./info.php');
+    exit();
+ }
 ?>
 <body>
     <div class="container">
