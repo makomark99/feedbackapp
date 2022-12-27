@@ -67,7 +67,7 @@ if(isset($_POST['fourthsend'])){
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-    mysqli_close();
+    mysqli_close($conn);
 }
 
 ?>

@@ -1,5 +1,6 @@
 let range = document.getElementById("range");
-const levels = ['Nem elégedett','Átlagos','Elégedett','Nagyon elégedett'];
+const levels = ['Nem elégedett 😠','Átlagos 😒','Elégedett 😊','Nagyon elégedett 😍'];
+console.log(levels);
 range.addEventListener('change',()=>{
     let value = range.value;
     let text = document.getElementById("text");

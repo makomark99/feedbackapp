@@ -6,9 +6,16 @@
 .button{
     border:2px solid red;
     border-radius: 32px;
+    
 }
 @media screen and (max-width: 800px) {
     .time{
         display: none;
     }
+}
+.blurmodals{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    padding: 10px;
+    border-radius: 20px;
 }

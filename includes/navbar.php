@@ -23,12 +23,6 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav align-right text-center">
         <?php
-        if(isset($_SESSION['id'])){
-          echo '<li class="nav-item">';
-          echo '<a class="nav-link"  href="./result.php"><strong>Kimutatások</strong></a>';
-          echo '</li>';
-          
-        }
           if(isset($_SESSION['id'])){
             echo '<li class="nav-item">';
             echo '<a class="nav-link"  href="./includes/logout.inc.php"><strong>Kijelentkezés</strong></a>';
@@ -53,11 +47,11 @@
 </nav>
 <style>
 body{
-    background-image: url("./img/arki.png");
+    
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(./img/arki.png) #222222;
     background-repeat: no-repeat; 
     background-attachment: fixed;
     background-size: cover;
-    
 }
-
 </style>

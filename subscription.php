@@ -12,7 +12,7 @@ if(isset($_SESSION['id'])){
 <body>
     <div class="container">
         <div class="row">  
-        <div class="card mt-5 mx-auto" style="width: 50rem;">
+        <div class="card mt-5 mx-auto button" style="width: 50rem;">
             <div class="card-body">
                 <h1 class="card-title text-center mb-5 mt-3"> <strong>Fel van iratkozva hírlevelünkre?</strong> </h1>
                 <form action="includes/addtodatabase.inc.php" method="post" class="text-center fs-3">
@@ -35,7 +35,7 @@ if(isset($_SESSION['id'])){
                         </label>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="mt-3 btn btn-danger btn-lg" name="secondsend"><strong>Következő<img src="img/arrow-right.svg" alt=""></strong></button>
+                        <button type="submit" class="mt-3 btn btn-danger btn-lg button" name="secondsend"><strong>Következő<img src="img/arrow-right.svg" alt=""></strong></button>
                     </div>
                 </form>
             </div>

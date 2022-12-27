@@ -22,6 +22,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.1.1/dist/chart.umd.min.js"></script>
 
 <link rel="stylesheet" href="includes/style.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 </html>

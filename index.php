@@ -12,7 +12,7 @@ if(isset($_SESSION['id'])){
 <body>
     <div class="container">
         <div class="row">  
-        <div class="card mt-5 mx-auto" style="width: 50rem;">
+        <div class="card mt-5 mx-auto button" style="width: 50rem;">
             <div class="card-body">
                 <h1 class="card-title text-center mb-5 mt-3"> <strong>Honnan hallott rólunk?</strong> </h1>
                 <form action="includes/addtodatabase.inc.php" method="post" class="text-center fs-3">
