@@ -28,16 +28,16 @@
         </div>
         <div class="row">
         <div class="card mt-5 mx-auto p-0 blurmodals button mb-5" style="width: 70rem;">
-            <div class="card-body mx-auto ">
+            <div class="card-body">
                 <h1 class="text-center mt-3 mb-5">Válaszok:</h1>
                 <table class="table mx-auto" style="width:95%">
                     <thead>
                         <tr>
                         <th scope="col">#</th>
                         <th scope="col">Honnan hallott rólunk?</th>
-                        <th scope="col">Fel van e iratkozva?</th>
+                        <th scope="col" class="sub">Fel van e iratkozva?</th>
                         <th scope="col"><nobr>E-Mail</nobr></th> 
-                        <th scope="col">Elégedettség</th>
+                        <th scope="col" >Elégedettség</th>
                         <th scope="col" class="time">Dátum</th>
                         </tr>
                     </thead>
@@ -66,17 +66,17 @@
                             }
                             switch ($row['SUBSCRIBE']) {
                                 case '1':
-                                    echo "<td>Nem, de szeretnék.</td>";
+                                    echo "<td class='sub'>Nem, de szeretnék.</td>";
                                     break;
                                 case '2':
-                                    echo "<td>Nem, és nem is szeretnék.</td>";
+                                    echo "<td class='sub'>Nem, és nem is szeretnék.</td>";
                                     break;
                                 case '3':
-                                    echo "<td>Igen.</td>";
+                                    echo "<td class='sub'>Igen.</td>";
                                     break;
                                 
                                 default:
-                                    echo "<td> -------- </td>";
+                                    echo "<td class='sub'> -------- </td>";
                                     break;
                             }
                             if ($row['EMAIL']== NULL) {
