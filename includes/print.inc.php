@@ -1,5 +1,6 @@
 <?php
 use Shuchkin\SimpleXLSXGen;
+
 require_once 'databasehandler.inc.php';
 require_once 'SimpleXLSXGen.php';
 $feedback = [
@@ -10,8 +11,8 @@ $feedback = [
 $id = 0;
 $sql = "SELECT * FROM answers ORDER BY ID Desc";
 $result = mysqli_query($conn, $sql);
-if(mysqli_num_rows($result)>0){
-    foreach($result as $row){
+if (mysqli_num_rows($result)>0) {
+    foreach ($result as $row) {
         $id++;
         $FROM_WHERE="";
         $SUBSCRIBE="";
@@ -28,7 +29,7 @@ if(mysqli_num_rows($result)>0){
                 $FROM_WHERE.="Új ügyfél vagyok, interneten találkoztam a céggel.";
                 break;
             default:
-                $FROM_WHERE.="--------";
+                $FROM_WHERE.="";
                 break;
             }
         switch ($row['SUBSCRIBE']) {
@@ -40,49 +41,46 @@ if(mysqli_num_rows($result)>0){
                 break;
             case '3':
                 $SUBSCRIBE.="Igen.";
-                break; 
+                break;
             default:
-                $SUBSCRIBE.="--------";
+                $SUBSCRIBE.="";
                 break;
             }
-        if ($row['EMAIL']== NULL) {
-            $EMIAL.="--------";
-        }
-        else{
+        if ($row['EMAIL']== null) {
+            $EMIAL.="";
+        } else {
             $EMIAL.="$row[EMAIL]";
         }
         switch ($row['SATISFACTION']) {
             case '1':
-                $SATISFACTION.="Nem elégedett😠";
+                $SATISFACTION.="Nem elégedett";
                 break;
             case '2':
-                $SATISFACTION.="Átlagos😒";
+                $SATISFACTION.="Átlagos";
                 break;
             case '3':
-                $SATISFACTION.="Elégedett😊";
+                $SATISFACTION.="Elégedett";
                 break;
             case '4':
-                $SATISFACTION.="Nagyon Elégedett😍";
+                $SATISFACTION.="Nagyon elégedett";
                 break;
                     
             default:
-                $SATISFACTION.="--------";
+                $SATISFACTION.="";
                 break;
-        }  
-        $feedback = array_merge($feedback,array(
+        }
+        $feedback = array_merge($feedback, array(
             array(
-                $id, 
-                $FROM_WHERE, 
+                $id,
+                $FROM_WHERE,
                 $SUBSCRIBE,
                 $EMIAL,
                 $SATISFACTION,
                 $row['DATE_TIME'])));
     }
     $xlsx = SimpleXLSXGen::fromArray($feedback);
-    $xlsx -> downloadAs('report.xlsx');
-}
-else{
+    $xlsx -> downloadAs('FeedbackResults'.date("YmdHis").'.xlsx');
+} else {
     header('Location: ../info.php?error=nodata');
     exit();
 }
-?>
