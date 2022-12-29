@@ -1,7 +1,7 @@
 <?php
-$servername = "pultappdb";
-$username = "pultappdb_u";
-$password = "ht2@M65p";
+$servername = "localhost";
+$username = "root";
+$password = "";
 $databasename = "feedbackapp";
 $conn = mysqli_connect($servername, $username, $password, $databasename);
 if (!$conn) {
