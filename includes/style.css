@@ -8,20 +8,159 @@
     border-radius: 32px;
     
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .time{
         display: none;
     }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     
     .sub{
         display: none;
     }
+
 }
 .blurmodals{
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
     padding: 10px;
     border-radius: 20px;
+}
+input[type="radio"]:checked {
+    background-color: #b6001e;
+}
+input[type="radio"] {
+    background-color: white;
+}
+
+.pagination > li > a, .pagination > li > span {
+    background-color: black;
+}
+
+.pagination > li.active > a, .pagination > li.active > span {
+    background-color: #0d6efd;
+    border: 1px solid white;
+}
+
+.pagination > li.visited > a, .pagination > li.visited > span {
+    background-color: gray !important;
+}
+
+
+#myTable_ellipsis {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white !important;
+}
+#myTable_previous {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+#myTable_next {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    
+}
+#myTable_info {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    margin-top:5px;
+
+    padding: 8px;
+    border-radius: 20px;
+}
+#myTable_length > label {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 4px 8px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+#myTable_length > label > select {
+    color: black;
+    background: conic-gradient(white,#8a8a8a);
+    background-color: #8a8a8a;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    font-size: 110%;
+}
+#myTable_filter > label {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 4px 8px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+    #myTable_filter > label > input[type=search] {
+        color: black;
+        background: conic-gradient(#8a8a8a,white);
+        background-color: #8a8a8a;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding-left: 10px;
+        border:2px solid black;
+    }
+#myTable > tbody > tr > td{
+    color:white;
+}
+#myTable_paginate > span > a {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border:1px solid black;
+}
+    #myTable_paginate > span > a.paginate_button.current {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        color: white !important;
+        padding: 8px 16px;
+        border-radius: 20px;
+        color:black !important;
+    }
+pevious.disabled{
+    background-color:black !important;
+}
+
+#myTable_next.disabled {
+    background-color: #8a8a8a !important;
+    color: black !important;
+}
+
+#myTable_previous.disabled {
+    background-color: #8a8a8a !important;
+    color: black !important;
+}
+#myTable_paginate > span > a:hover {
+    background: conic-gradient(#8a8a8a,white);
+    color:black !important;
+    
+}
+#myTable_next:not(.disabled):hover {
+    background: conic-gradient(#8a8a8a, white);
+    color: black !important;
+}
+
+#myTable_next.disabled:hover {
+    background-color: #8a8a8a !important;
+    color: black !important;
+}
+#myTable_previous:not(.disabled):hover {
+    background: conic-gradient(#8a8a8a, white);
+    color: black !important;
+}
+
+#myTable_previous.disabled:hover {
+    background-color: #8a8a8a !important;
+    color: black !important;
 }
